@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System - User Management</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Library Management System</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="admin_dashboard.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="books.html">Book Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="users.html">User Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="borrow_status.html">Borrowing Status</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Sign-out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>User List</h2>
+                <ul id="user-list" class="list-group"></ul> <!-- Display User List -->
+            </div>
+            <div class="col-md-6">
+                <h2>Add/Edit User</h2>
+                <form id="add-edit-user-form">
+                    <input type="hidden" id="user-id">
+                    <div class="form-group">
+                        <label for="user-username">Username</label>
+                        <input type="text" id="user-username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-password">Password</label>
+                        <input type="password" id="user-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-role">Role</label>
+                        <select id="user-role" class="form-control" required>
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                    <button type="button" id="delete-user" class="btn btn-danger btn-block d-none">删除用户</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/users.js"></script> 
+    <script src="js/auth.js"></script>
+</body>
+</html>
+
